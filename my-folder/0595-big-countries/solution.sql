@@ -1,6 +1,4 @@
--- Write your PostgreSQL query statement below--
+-- Write your PostgreSQL query statement below
 SELECT name, population, area
 FROM world
-WHERE area > 2999999
-    OR population > 24999999;
-
+WHERE population >= 25000000 or area >= 3000000
