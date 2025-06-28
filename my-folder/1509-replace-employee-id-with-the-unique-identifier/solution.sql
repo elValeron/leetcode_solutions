@@ -1,5 +1,8 @@
 -- Write your PostgreSQL query statement below
-SELECT euni.unique_id, e.name
-FROM employees e
-LEFT JOIN employeeUNI euni
-ON e.id = euni.id
+SELECT (
+    SELECT unique_id
+      FROM employeeUNI
+     WHERE id = e.id
+       ) AS unique_id, e.name
+  FROM employees AS e
+ 
